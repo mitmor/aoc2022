@@ -2,11 +2,12 @@
 
 inventory = []
 
+
 def get_totals(inv):
     summed = []
-    for l in inv:
+    for li in inv:
         total = 0
-        for i in l:
+        for i in li:
             total = total + int(i)
         summed.append(total)
     return(summed)
@@ -27,7 +28,8 @@ def get_biggest(totals):
         sums = sums + i
     return sums
 
-with open('input.txt','r') as f:
+
+with open('input.txt', 'r') as f:
     c = []
     for i in f.readlines():
         if i == '\n':
@@ -37,7 +39,3 @@ with open('input.txt','r') as f:
             c.append(i.strip())
 
 print(get_biggest(get_totals(inventory)))
-
-            
-
-
